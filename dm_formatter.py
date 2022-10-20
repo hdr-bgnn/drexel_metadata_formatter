@@ -1,3 +1,8 @@
+# Convert drexel_metadata JSON file to BGNN minnow metadata JSON file
+import json
+import argparse
+
+
 def reformat_for_bgnn(result):
     """
     Reformat and reduce the size of the result dictionary. 
@@ -55,3 +60,25 @@ def reformat_for_bgnn(result):
                    'fish': dict_fish, 'ruler': dict_ruler} 
     
     return bgnn_result
+
+
+def argument_parser():
+    parser = argparse.ArgumentParser(description='Convert metadata json file to BGNN minnow project format.')
+    parser.add_argument('input', help='Path of input drexel_metadata format JSON metadata file.')
+    parser.add_argument('output', help='Path of output BGNN minnow format JSON metadata file.')
+    return parser
+
+
+def main():
+    parser = argument_parser()
+    args = parser.parse_args()
+    print(f"Converting {args.input} to BGNN minnows format {args.output}")
+    with open(args.input, 'r') as infile:
+        data = json.load(infile)
+        result = reformat_for_bgnn(data)
+        with open(args.output, 'w') as outfile:
+             outfile.write(json.dumps(result))
+
+
+if __name__ == '__main__':
+    main()
