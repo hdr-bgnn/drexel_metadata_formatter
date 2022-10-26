@@ -18,3 +18,9 @@ positional arguments:
 optional arguments:
   -h, --help  show this help message and exit
  ```
+
+## Testing
+The unit tests can be run with the following command:
+```
+python3 -m unittest discover .
+```
