@@ -7,8 +7,8 @@ def reformat_for_bgnn(result):
     """
     Reformat and reduce the size of the result dictionary. 
     Collect only the data necessary for BGNN minnow project. The new format matches the 
-    BGNN_metadata version. Therefore some of the value not calcualted in drexel version are by 
-    defaulset to "None". 
+    BGNN_metadata version. Therefore some of the values not calculated in drexel version are by 
+    default set to "None". 
 
     Parameters
     ----------
@@ -32,7 +32,7 @@ def reformat_for_bgnn(result):
     # Fish metadata
     fish_num = first_value['fish_count']
     fish_bbox = first_value['fish'][0]['bbox']
-    pixel_analysis = False if first_value['fish'][0]['pixel_analysis_failed'] else True
+    pixel_analysis = not first_value['fish'][0]['pixel_analysis_failed']
     
     if first_value['fish'][0]['has_eye']:
         eye_center = first_value['fish'][0]['eye_center']
@@ -43,11 +43,11 @@ def reformat_for_bgnn(result):
     foreground_mean = first_value['fish'][0]['foreground']['mean']
     background_mean = first_value['fish'][0]['background']['mean']
         
-    dict_fish = {'fish_num': fish_num,"bbox":fish_bbox, 
-                 'pixel_analysis':pixel_analysis, 'rescale':"None", 
-                 'eye_bbox': "None", 'eye_center':eye_center , 'angle_degree': "None",
-                 'eye_direction':eye_direction, 'foreground_mean':round(foreground_mean,2), 
-                 'background_mean':round(background_mean,2)}
+    dict_fish = {'fish_num': fish_num,"bbox": fish_bbox, 
+                 'pixel_analysis': pixel_analysis, 'rescale': "None", 
+                 'eye_bbox': "None", 'eye_center': eye_center , 'angle_degree': "None",
+                 'eye_direction': eye_direction, 'foreground_mean': round(foreground_mean,2), 
+                 'background_mean': round(background_mean,2)}
     
     # Ruler metadata
     ruler_bbox  = first_value['ruler_bbox'] if first_value['has_ruler'] else "None"
