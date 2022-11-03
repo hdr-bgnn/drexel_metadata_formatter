@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Convert drexel_metadata JSON file to BGNN minnow metadata JSON file
 import json
 import argparse
