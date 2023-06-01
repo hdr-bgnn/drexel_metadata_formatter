@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/554906817.svg)](https://zenodo.org/badge/latestdoi/554906817)
+
 # drexel_metadata_formatter
 Reformats the metadata output file from the [drexel_metadata repo](https://github.com/hdr-bgnn/drexel_metadata/).
 
