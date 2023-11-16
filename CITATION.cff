@@ -1,0 +1,45 @@
+cff-version: 0.0.1
+date-released: "2023-05-30"
+authors:
+  - family-names: Tabarin
+    given-names: Thibault
+    orcid: "https://orcid.org/0000-0003-4256-849X"
+  - family-names: Bradley
+    given-names: John
+    orcid: "https://orcid.org/0000-0003-3858-848X"
+  - family-names: Lapp
+    given-names: Hilmar
+    orcid: "https://orcid.org/0000-0001-9107-0714"
+identifiers:
+  - description: "Reformats the metadata output file from the drexel_metadata repo."
+    type: doi
+    value: 10.5281/zenodo.7987576
+keywords:
+  - "imageomics"
+  - "metadata"
+license: MIT
+message: "If you use this software, please cite it using these metadata."
+references:
+  - authors:
+      - family-names: Karnani
+        given-names: Kevin
+      - family-names: Pepper
+        given-names: Joel
+      - family-names: Bakis
+        given-names: Yasin
+      - family-names: Wang
+        given-names: Xiaojun
+      - family-names: "Bart, Jr."
+        given-names: Henry
+      - family-names: Breen
+        given-names: "David E"
+      - family-names: Greenberg
+        given-names: Jane
+    doi: 10.57967/hf/0904
+    repository-code: "https://github.com/hdr-bgnn/drexel_metadata"
+    title: Drexel-metadata-generator
+    type: software
+    version: 0.6
+repository-code: "https://github.com/hdr-bgnn/drexel_metadata_formatter"
+title: "Drexel metadata formatter"
+version: 0.0.1
