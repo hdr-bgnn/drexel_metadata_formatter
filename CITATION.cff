@@ -1,5 +1,6 @@
 cff-version: 1.0.0
 date-released: "2023-05-30"
+abstract: "Reformats the metadata output file from the drexel_metadata repo."
 authors:
   - family-names: Tabarin
     given-names: Thibault
@@ -11,7 +12,7 @@ authors:
     given-names: Hilmar
     orcid: "https://orcid.org/0000-0001-9107-0714"
 identifiers:
-  - description: "Reformats the metadata output file from the drexel_metadata repo."
+  - description: "Snapshot of drexel_metadata_formatter: Version 0.0.1"
     type: doi
     value: 10.5281/zenodo.7987576
 keywords:
